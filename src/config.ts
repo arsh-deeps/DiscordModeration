@@ -9,6 +9,7 @@ const MOD_LOG_CHANNEL = process.env.MOD_LOG_CHANNEL!;
 const CLIENT_ID = process.env.CLIENT_ID!;
 const GUILD_ID = process.env.GUILD_ID!;
 const MODERATOR_ROLE_ID = process.env.MODERATOR_ROLE_ID!;
+const MODERATED_CHANNELS = process.env.MODERATED_CHANNELS?.split(",") || [];
 
 if (
   !TOKEN ||
@@ -37,4 +38,5 @@ export {
   CLIENT_ID,
   GUILD_ID,
   MODERATOR_ROLE_ID,
+  MODERATED_CHANNELS,
 };

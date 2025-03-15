@@ -1,5 +1,6 @@
 import { Message } from "discord.js";
 import { ModerationService } from "../services/moderationService";
+import { MODERATED_CHANNELS } from "../config";
 
 export class MessageCreateEventHandler {
   private moderationService: ModerationService;
@@ -10,9 +11,7 @@ export class MessageCreateEventHandler {
 
   public async handleMessageCreate(message: Message) {
     if (message.author.bot) return;
-
-    const moderatedChannels = process.env.MODERATED_CHANNELS?.split(",") || [];
-    if (!moderatedChannels.includes(message.channel.id)) return;
+    if (!MODERATED_CHANNELS.includes(message.channel.id)) return;
 
     try {
       await this.moderationService.moderateMessage(message);
