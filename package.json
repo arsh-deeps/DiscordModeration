@@ -1,0 +1,29 @@
+{
+  "name": "discord-moderation",
+  "version": "1.0.0",
+  "description": "A Discord bot for moderating messages using OpenAI's moderation API.",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "npx tsc",
+    "dev": "ts-node-dev src/index.ts"
+  },
+  "dependencies": {
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.7",
+    "openai": "^4.86.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/node": "^22.13.8",
+    "typescript": "^5.8.2"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "moderation",
+    "openai"
+  ],
+  "author": "Arshdeep Singh",
+  "license": "MIT"
+}
