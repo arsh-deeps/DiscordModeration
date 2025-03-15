@@ -17,7 +17,7 @@ export class ModerationService {
     });
 
     const result = response.results[0];
-    const THRESHOLD = 0.3;
+    const THRESHOLD = 0.4;
     const flaggedCategories = Object.entries(result.category_scores)
       .filter(([_, score]) => (score as number) > THRESHOLD)
       .map(([category]) => category);
